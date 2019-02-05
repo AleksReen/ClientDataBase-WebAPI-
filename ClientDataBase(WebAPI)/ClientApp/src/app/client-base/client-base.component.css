@@ -1,0 +1,19 @@
+.app-client-base__conteiner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.app-client-base__form-conteiner {
+  margin: 10px 10px 10px 10px;
+  flex-grow: 0.5;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+.app-client-base__table-conteiner {
+  margin: 10px 10px 10px 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  flex-grow: 1.5;
+}

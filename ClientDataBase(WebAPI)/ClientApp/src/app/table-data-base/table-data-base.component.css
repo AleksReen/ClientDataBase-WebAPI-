@@ -1,0 +1,26 @@
+.app-table-data-base__table-data {
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+.app-table-data-base__table-row_selected {
+  border: 3px solid #1976d2
+}
+
+.app-table-data-base__button-edit {
+  min-width: 30px;
+  line-height: 30px;
+  height: 30px;
+  padding: 0px;
+  background-color: #f89406;
+  color: white;
+}
+
+.app-table-data-base__button-delete {
+  min-width: 30px;
+  line-height: 30px;
+  height: 30px;
+  padding: 0px;
+  background-color: red;
+  color: white;
+}
