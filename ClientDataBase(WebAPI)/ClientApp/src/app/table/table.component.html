@@ -1,11 +1,11 @@
 <div class="app-table__main-conteiner">
 
-  <h2 class="app-table__maintext" *ngIf="searchState == 'default'">Clients Data Base</h2>
-  <h2 class="app-table__maintext" *ngIf="searchState == 'search'">Result of Search</h2>
+  <h2 class="app-table__maintext">Clients Data Base</h2>
+
   <br>
 
   <div class="app-table__search-conteiner">
-    <!--<app-search (emitSearchName)="searchClient($event)" (emitReturnBase)="returnBase($event)"> </app-search>-->
+    <app-search (emitSearchName)="searchClient($event)"></app-search>
   </div>
 
   <br>
@@ -13,12 +13,8 @@
 
   <div class="app-table__table-conteiner">
     <div class="app-table__table-data-base-conteiner">
-      <app-table-data-base> </app-table-data-base>
+      <app-table-data-base [(listClients)]="listClients"> </app-table-data-base>
       <!--<app-table-data-base [(listClients)]="listClients" (deleteClientId)="deleteClient($event)" (editeClientId)="editeClient($event)"> </app-table-data-base>-->
-    </div>
-
-    <div class="app-table__table-search-conteiner">
-      <!--<app-table-search [(searchClientList)]="searchClientList" (deleteClientId)="deleteClient($event)" (editeClientId)="editeClient($event)"> </app-table-search>-->
     </div>
   </div>
   </div>

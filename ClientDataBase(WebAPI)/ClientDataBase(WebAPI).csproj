@@ -35,18 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.css" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.css" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.html" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.html" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.ts" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\app\footer\footer.component.ts" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.css" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.css" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.html" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.html" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.ts" />
-    <None Include="..\..\ClientDataBase%2528WebAPI%2529\ClientDataBase%2528WebAPI%2529\ClientApp\src\footer\footer.component.ts" />
     <None Include="wwwroot\angular2-footer.png" />
     <None Include="wwwroot\logo-picture.png" />
   </ItemGroup>

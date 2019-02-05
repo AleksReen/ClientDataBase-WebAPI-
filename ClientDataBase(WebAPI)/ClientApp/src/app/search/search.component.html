@@ -1,0 +1,15 @@
+<div class="app-search__conteiner">
+
+  <mat-form-field>
+    <input color="primary" id="search" class="app-search__input" type="text" name="search" value="" [(ngModel)]="searchName" matInput placeholder="Search">
+  </mat-form-field>
+
+  <div class="app-search__button-conteiner">
+
+    <button mat-raised-button class="app-search__button app-search__button_green" (click)="search()">
+      <i class="material-icons app-search__icon ">find_in_page</i>
+      <span>Search</span>
+    </button>
+
+  </div>
+</div>

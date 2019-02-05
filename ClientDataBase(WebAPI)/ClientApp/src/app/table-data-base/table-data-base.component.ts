@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Client } from '../../models/client';
-import { DataService } from '../services/data.service';
 
 @Component({
     selector: 'app-table-data-base',
@@ -8,22 +7,18 @@ import { DataService } from '../services/data.service';
     styleUrls: ['./table-data-base.component.css']
 })
 
-export class TableDataBaseComponent {
+export class TableDataBaseComponent implements OnInit {
 
+  @Input()
   public listClients: Client[];
-  public dataService: DataService;
+  public selectedClient: Client;
 
-  constructor(private _dataService: DataService) {
-    this.dataService = _dataService;
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  public onSelect(item: Client) {
+    this.selectedClient = item;
   }
-
-  ngOnInit(): void {
-
-    this.dataService.GetClientBase().subscribe(result => {
-      this.listClients = result;
-    }, error => console.error(error));
-
-  }
-
 
 }

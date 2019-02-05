@@ -14,21 +14,14 @@ export class DataService {
     this.baseUrl = _baseUrl;
   }
 
-  
-
   public GetClientBase(): Observable<Client[]> {
     return this.http.get<Client[]>(this.baseUrl + "api/Client");
   }
 
+  public FilterClienBase(clients: Client [], name: string):Client [] {
+    return clients.filter(client => client.name.includes(name));
+  }
 
 }
 
-
-interface IClient {
-  id: number;
-  name: string;
-  address: string;
-  phone: string;
-  email: string;
-}
 

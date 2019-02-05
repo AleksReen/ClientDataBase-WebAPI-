@@ -3,8 +3,12 @@
   overflow-wrap: break-word;
 }
 
+tr:hover {
+  background-color: #e3f2fd;
+}
+
 .app-table-data-base__table-row_selected {
-  border: 3px solid #1976d2
+  background-color: #e3f2fd;
 }
 
 .app-table-data-base__button-edit {
@@ -24,3 +28,4 @@
   background-color: red;
   color: white;
 }
+

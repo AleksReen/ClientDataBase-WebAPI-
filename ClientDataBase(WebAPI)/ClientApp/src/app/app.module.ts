@@ -11,6 +11,9 @@ import { ClientBaseComponent } from './client-base/client-base.component';
 import { DataService } from './services/data.service';
 import { TableComponent } from './table/table.component';
 import { TableDataBaseComponent } from './table-data-base/table-data-base.component';
+import { SearchComponent } from './search/search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule, MatButtonModule} from '@angular/material';
 
 
 @NgModule({
@@ -20,16 +23,20 @@ import { TableDataBaseComponent } from './table-data-base/table-data-base.compon
     FooterComponent,
     ClientBaseComponent,
     TableComponent,
-    TableDataBaseComponent
+    TableDataBaseComponent,
+    SearchComponent
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,
+    FormsModule,  
     RouterModule.forRoot([
       { path: '', component: AppComponent, pathMatch: 'full' }
-    ])
-    
+    ]),
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

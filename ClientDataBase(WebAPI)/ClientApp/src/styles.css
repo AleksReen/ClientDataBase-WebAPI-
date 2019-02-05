@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-body {
+.body {
   width: 100%;
   height: 100vh;
   margin: 0px;
   padding: 0px;
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
 }
 
 .app {
