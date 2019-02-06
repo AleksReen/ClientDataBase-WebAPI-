@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ClientDataBaseWebAPI.Models;
+using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -65,9 +66,25 @@ namespace ClientDataBaseWebAPI.Controllers
 
         };
 
+        [HttpGet]
         public ActionResult<IEnumerable<Client>> GetClientBase()
         {           
             return Ok(testClientDB);
         }
+
+        [HttpGet("{id}")]
+        public ActionResult GetClient(long id)
+        {
+            return Ok(testClientDB);
+        }
+
+        [HttpPost]
+        public ActionResult<Client> SaveClient([FromBody] ClientViewModel model)
+        {
+            var client = model.Adapt<Client>();
+            testClientDB.Add(client);
+            return Ok(client);
+        }
+
     }
 }

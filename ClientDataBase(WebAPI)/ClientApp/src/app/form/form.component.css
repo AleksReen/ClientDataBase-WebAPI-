@@ -1,0 +1,80 @@
+.app-form__main-conteiner {
+  display: block;
+  height: 100%;
+}
+
+.app-form__continer-client {
+  display: block;
+  height: 100%;
+}
+
+.app-form__continer-edite {
+  display: block;
+  height: 100%;
+}
+
+.app-form-create__form {
+  display: flex;
+  min-width: 250px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.app-form-create__form-name {
+  display: block;
+}
+
+.app-form-create__form-input {
+  width: 250px;
+  height: 30px;
+}
+
+.app-form-create__forma-button-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-form-create__form-button {
+  height: 45px;
+  line-height: 45px;
+  width: 130px;
+  margin: 10px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.app-form-create__form-button_green {
+  background-color: green;
+}
+
+.app-form-create__form-button_red {
+  background-color: red;
+}
+
+
+.app-form-create__form-attention {
+  font-size: 10px;
+  margin-bottom: -20px;
+}
+
+
+
+.app-form-create__form-attention_hidden {
+  visibility: hidden;
+}
+
+.app-form-create__form-attention_visible {
+  visibility: visible;
+  color: red;
+}

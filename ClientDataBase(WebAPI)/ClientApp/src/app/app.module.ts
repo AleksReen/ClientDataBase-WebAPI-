@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,7 +12,8 @@ import { TableComponent } from './table/table.component';
 import { TableDataBaseComponent } from './table-data-base/table-data-base.component';
 import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule} from '@angular/material';
+import { MatInputModule, MatButtonModule, MatFormFieldModule} from '@angular/material';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -24,19 +24,22 @@ import { MatInputModule, MatButtonModule} from '@angular/material';
     ClientBaseComponent,
     TableComponent,
     TableDataBaseComponent,
-    SearchComponent
+    SearchComponent,
+    FormComponent
 
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,  
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent, pathMatch: 'full' }
     ]),
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

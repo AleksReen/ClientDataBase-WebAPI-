@@ -1,0 +1,48 @@
+<div class="app-form__main-conteiner">
+
+  <div class="app-form__continer-client">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="app-form-create__form">
+      <h2 class="app-form-create__form-name">Form New Client</h2>
+
+      <mat-form-field>
+        <input matInput placeholder="Name"
+               color="primary" class="app-form-create__form-input" formControlName="Name" required>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Phone"
+               color="primary" class="app-form-create__form-input" formControlName="Phone" required>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Address"
+               color="primary" class="app-form-create__form-input" formControlName="Address" required>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <input matInput placeholder="Email"
+               color="primary" class="app-form-create__form-input" formControlName="Email" required>
+      </mat-form-field>
+      <br>
+
+      <div class="app-form-create__forma-button-conteiner">
+
+        <button mat-raised-button class="app-form-create__form-button app-form-create__form-button_green" type="submit">
+          <i class="material-icons">check_circle</i>
+          <span>Create</span>
+        </button>
+
+        <button mat-raised-button class="app-form-create__form-button app-form-create__form-button_red" (click)="clearForm()">
+          <i class="material-icons">delete_forever</i>
+          <span>Clear Form</span>
+        </button>
+      </div>
+    </form>
+
+  </div>
+
+</div>

@@ -2,16 +2,16 @@ import { Injectable, Inject} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Client } from '../../models/client';
 import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class DataService {
 
-  http: HttpClient;
-  baseUrl: string;
+  newClient: BehaviorSubject<any> = new BehaviorSubject(1); 
 
-  constructor(_http: HttpClient, @Inject('BASE_URL') _baseUrl: string) {
-    this.http = _http;
-    this.baseUrl = _baseUrl;
+  constructor(
+    private http: HttpClient,
+    @Inject('BASE_URL') private baseUrl: string) {
   }
 
   public GetClientBase(): Observable<Client[]> {
@@ -20,6 +20,10 @@ export class DataService {
 
   public FilterClienBase(clients: Client [], name: string):Client [] {
     return clients.filter(client => client.name.includes(name));
+  }
+
+  public SaveClient(client: Client): Observable<Client> {
+    return this.http.post<Client>(this.baseUrl + "api/Client", client);
   }
 
 }

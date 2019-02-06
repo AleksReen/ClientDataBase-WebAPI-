@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, OnChanges} from '@angular/core';
 import { Client } from '../../models/client';
 import { DataService } from '../services/data.service';
 
@@ -8,13 +8,14 @@ import { DataService } from '../services/data.service';
     styleUrls: ['./table.component.css']
 })
 
-export class TableComponent {
+export class TableComponent implements OnInit {  
 
   public listClients: Client[] = [];
-  public dataService: DataService;
 
-  constructor(private _dataService: DataService) {
-    this.dataService = _dataService;
+  constructor(private dataService: DataService) {
+    this.dataService.newClient.subscribe(result => {
+      this.listClients.push(result);
+    })
   }
 
   ngOnInit(): void {

@@ -10,5 +10,6 @@ export class ClientBaseComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
 }
